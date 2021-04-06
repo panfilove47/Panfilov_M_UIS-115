@@ -2,12 +2,12 @@
 #include <string>
 #include <math.h>
 using namespace std;
-#include "Employee.h"
+#include "Rectangle.h"
 int main()
 {
 	setlocale(LC_ALL, "ru");
 	int x1, y1, x2, y2, z;
-	Employee knigaO;
+	Rectangle knigaO;
 	cout << "Enter x1" << endl;
 	cin >> x1;
 	cout << "Enter y1" << endl;
@@ -22,7 +22,7 @@ int main()
 	knigaO.RightAngleY = y2;
 	knigaO.Emp_show();
 
-	Employee Pr2;
+	Rectangle Pr2;
 	cout << "Enter the move: " << endl;
 	cin >> z;
 	Pr2.LeftAngleX = x1 + z;

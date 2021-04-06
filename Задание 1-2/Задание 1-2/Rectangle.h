@@ -4,11 +4,11 @@
 using namespace std;
 
 
-class Employee
+class Rectangle
 {
 public:
-	Employee(); //Объявление конструктора
-	~Employee(); //Объявление деструктора
+	Rectangle(); //Объявление конструктора
+	~Rectangle(); //Объявление деструктора
 	void Emp_show(void);
 	void Pme_show(void);
 	int LeftAngleX;
@@ -21,13 +21,13 @@ public:
 private:
 };
 //Инициализация конструктора
-Employee::Employee()
+Rectangle::Rectangle()
 {
 }
-Employee::~Employee()
+Rectangle::~Rectangle()
 {
 }
-void Employee::Emp_show(void)
+void Rectangle::Emp_show(void)
 {
 	setlocale(0, "");
 	cout << "upper-left corner by x: " << LeftAngleX << endl;
@@ -43,7 +43,7 @@ void Employee::Emp_show(void)
 	cout << "Width : " << shirina << endl;
 	cout << "Area: " << S << endl;
 }
-void Employee::Pme_show(void)
+void Rectangle::Pme_show(void)
 {
 	dlina = LeftAngleX - RightAngleX;
 	dlina = abs(dlina);
