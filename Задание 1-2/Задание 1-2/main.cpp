@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string>
+#include <sstream>
 #include <math.h>
 using namespace std;
 #include "Rectangle.h"
@@ -7,7 +7,7 @@ int main()
 {
 	setlocale(LC_ALL, "ru");
 	int x1, y1, x2, y2, z;
-	Rectangle knigaO;
+	Rectangle EnteringCoordinates;
 	cout << "Enter x1" << endl;
 	cin >> x1;
 	cout << "Enter y1" << endl;
@@ -16,20 +16,20 @@ int main()
 	cin >> x2;
 	cout << "Enter y2" << endl;
 	cin >> y2;
-	knigaO.LeftAngleX = x1;
-	knigaO.LeftAngleY = y1;
-	knigaO.RightAngleX = x2;
-	knigaO.RightAngleY = y2;
-	knigaO.Emp_show();
+	EnteringCoordinates.LeftAngleX = x1;
+	EnteringCoordinates.LeftAngleY = y1;
+	EnteringCoordinates.RightAngleX = x2;
+	EnteringCoordinates.RightAngleY = y2;
+	EnteringCoordinates.Emp_show();
 
-	Rectangle Pr2;
+	Rectangle Move;
 	cout << "Enter the move: " << endl;
 	cin >> z;
-	Pr2.LeftAngleX = x1 + z;
-	Pr2.LeftAngleY = y1 + z;
-	Pr2.RightAngleX = x2 + z;
-	Pr2.RightAngleY = y2 + z;
-	Pr2.Pme_show();
+	Move.LeftAngleX = x1 + z;
+	Move.LeftAngleY = y1 + z;
+	Move.RightAngleX = x2 + z;
+	Move.RightAngleY = y2 + z;
+	Move.Pme_show();
 	system("Pause");
 	return 0;
 }
