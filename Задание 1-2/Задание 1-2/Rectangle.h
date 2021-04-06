@@ -7,8 +7,8 @@ using namespace std;
 class Rectangle
 {
 public:
-	Rectangle(); //Объявление конструктора
-	~Rectangle(); //Объявление деструктора
+	Rectangle(); //РћР±СЉСЏРІР»РµРЅРёРµ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
+	~Rectangle(); //РћР±СЉСЏРІР»РµРЅРёРµ РґРµСЃС‚СЂСѓРєС‚РѕСЂР°
 	void Emp_show(void);
 	void Pme_show(void);
 	int LeftAngleX;
@@ -20,7 +20,7 @@ public:
 	int S;
 private:
 };
-//Инициализация конструктора
+//РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
 Rectangle::Rectangle()
 {
 }
