@@ -55,13 +55,21 @@ public:
     {
         return (abs(x1 - x2)) * (abs(y1 - y2));
     }
-    double getMoving(double moveX, double moveY)
+    double getmovingX1(double move)
     {
-        x1 = x1 + moveX;
-        x2 = x2 + moveX;
-        y1 = y1 + moveY;
-        y2 = y2 + moveY;
-        return x1, x2, y1, y2;
+        return x1 + move;
+    }
+    double getmovingX2(double move) 
+    {
+        return x2 + move;
+    }
+    double getmovingY1(double move)
+    {
+        return y1 + move;
+    }
+    double getmovingY2(double move)
+    {
+        return y2 + move;
     }
     ~Rectangle() {};
 };
