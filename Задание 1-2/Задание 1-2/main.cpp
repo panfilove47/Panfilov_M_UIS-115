@@ -14,14 +14,15 @@ int main()
 	cout << "Enter the y2 coordinate: " << endl;
 	cin >> y2;
 	Rectangle rect(x1, y1, x2, y2);
-	cout << "Top left corner: " << "(" << rect.getcoordinate_displayX1() << ";" << rect.getcoordinate_displayY1() << ")" << endl;
-	cout << "Bottom right corner: " << "(" << rect.getcoordinate_displayX2() << ";" << rect.getcoordinate_displayY2() << ")" << endl;
-	cout << "Height = " << rect.getHeight() << endl;
-	cout << "Width = " << rect.getWidth() << endl;
-	cout << "Area = " << rect.getArea() << endl;
+	cout << "Top left corner: " << "(" << rect.get_coordinate_display_x1() << " ; " << rect.get_coordinate_display_y1() << ")" << endl;
+	cout << "Bottom right corner: " << "(" << rect.get_coordinate_display_x2() << " ; " << rect.get_coordinate_display_y2() << ")" << endl;
+	cout << "Height = " << rect.get_height() << endl;
+	cout << "Width = " << rect.get_width() << endl;
+	cout << "Area = " << rect.get_area() << endl;
 
 	cout << "Enter movement: ";
 	cin >> move;
-	cout << "Moved top-left coordinates: " << "(" << rect.getmovingX1(move) << " ; " << rect.getmovingY1(move) << ")" << endl;
-	cout << "Moved coordinates of the lower right corner: " << "(" << rect.getmovingX2(move) << " ; " << rect.getmovingY2(move) << ")" << endl;
+	rect.set_moving(move);
+	cout << "Moved top-left coordinates:" << endl << "(" << rect.get_x1() << " ; " << rect.get_y1() << ")" << endl;
+	cout << "Moved bottom-right coordinates:" << endl << "(" << rect.get_x2() << " ; " << rect.get_y2() << ")" << endl;
 }

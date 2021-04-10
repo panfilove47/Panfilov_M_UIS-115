@@ -20,56 +20,63 @@ public:
     Rectangle(double a_x1, double a_y1, double a_x2, double a_y2)
     {
         x1 = a_x1;
-        y1 = a_y1;
         x2 = a_x2;
+        y1 = a_y1;
         y2 = a_y2;
     }
-    double getcoordinate_displayX1()
+    double get_coordinate_display_x1()
     {
         return x1;
     }
-    double getcoordinate_displayX2()
+    double get_coordinate_display_x2()
     {
         return x2;
     }
-    double getcoordinate_displayY1()
+    double get_coordinate_display_y1()
     {
         return y1;
     }
-    double getcoordinate_displayY2()
+    double get_coordinate_display_y2()
     {
         return y2;
     }
 
-    double getHeight() const
+    double get_height() const
     {
         return abs(y1 - y2);
     }
 
-    double getWidth() const
+    double get_width() const
     {
         return abs(x1 - x2);
     }
 
-    double getArea() const
+    double get_area() const
     {
         return (abs(x1 - x2)) * (abs(y1 - y2));
     }
-    double getmovingX1(double move)
+    void set_moving(double move)
     {
-        return x1 + move;
+        x1 += move;
+        x2 += move;
+        y1 += move;
+        y2 += move;
     }
-    double getmovingX2(double move) 
+    double get_x1() 
     {
-        return x2 + move;
+        return x1;
     }
-    double getmovingY1(double move)
+    double get_x2()
     {
-        return y1 + move;
+        return x2;
     }
-    double getmovingY2(double move)
+    double get_y1()
     {
-        return y2 + move;
+        return y1;
+    }
+    double get_y2()
+    {
+        return y2;
     }
     ~Rectangle() {};
 };
