@@ -62,7 +62,7 @@ public:
         y1 += move;
         y2 += move;
     }
-    double get_x1() 
+    double get_x1()
     {
         return x1;
     }
