@@ -43,17 +43,17 @@ public:
 
     double get_height() const
     {
-        return abs(y1 - y2);
+        return y1 - y2;
     }
 
     double get_width() const
     {
-        return abs(x1 - x2);
+        return x2 - x1;
     }
 
     double get_area() const
     {
-        return (abs(x1 - x2)) * (abs(y1 - y2));
+        return (x2 - x1) * (y1 - y2);
     }
     void set_moving(double move)
     {

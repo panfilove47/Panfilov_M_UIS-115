@@ -8,23 +8,19 @@ int main()
 	bool unequal_coordinates = false;
 	while (unequal_coordinates == false) 
 	{
-		cout << "Enter the x1 coordinate: " << endl;
-		cin >> x1;
-		cout << "Enter the y1 coordinate: " << endl;
-		cin >> y1;
-		cout << "Enter the x2 coordinate: " << endl;
-		cin >> x2;
-		cout << "Enter the y2 coordinate: " << endl;
-		cin >> y2;
+		cout << "Enter the coordinates of the upper left corner (x1 ; y1): " << endl;
+		cin >> x1 >> y1;
+		cout << "Enter the coordinates of the bottom right (x2 ; y2): " << endl;
+		cin >> x2 >> y2;
 		cout << endl << endl;
-		if (x1 != x2 && y1 != y2) 
+		if ((x1 != x2 && y1 != y2) && (x1 < x2 && y1 > y2)) 
 		{
 			Rectangle rect(x1, y1, x2, y2);
 			cout << "Top left corner: " << "(" << rect.get_coordinate_display_x1() << " ; " << rect.get_coordinate_display_y1() << ")" << endl;
 			cout << "Bottom right corner: " << "(" << rect.get_coordinate_display_x2() << " ; " << rect.get_coordinate_display_y2() << ")" << endl;
 			cout << "Height = " << rect.get_height() << endl;
 			cout << "Width = " << rect.get_width() << endl;
-			cout << "Area = " << rect.get_area() << endl << endl;
+			cout << "Area = " << rect.get_area() << endl;
 
 			cout << "Do you want to move the rectangle?" << endl << "1 - YES" << endl << "0 - NO" << endl;
 			bool mooving = false;
@@ -62,7 +58,7 @@ int main()
 		}
 		else
 		{
-			cout << "Coordinates must be different enter different coordinates" << endl;
+			cout << "Coordinates must be different enter different coordinates" << endl << endl;
 		}
 	}
 	return 0;
