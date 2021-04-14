@@ -1,65 +1,32 @@
-#include <iostream>
-#include "Rectangle.h"
+#include<iostream>
+#include"Rectangle.h"
+#include <stdexcept>
 using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "ru");
-	double x1, x2, y1, y2, move;
-	bool unequal_coordinates = false;
-	while (unequal_coordinates == false) 
-	{
-		cout << "Enter the coordinates of the upper left corner (x1 ; y1): " << endl;
-		cin >> x1 >> y1;
-		cout << "Enter the coordinates of the bottom right (x2 ; y2): " << endl;
-		cin >> x2 >> y2;
-		cout << endl << endl;
-		if ((x1 != x2 && y1 != y2) && (x1 < x2 && y1 > y2)) 
-		{
-			Rectangle rect(x1, y1, x2, y2);
-			cout << "Top left corner: " << "(" << rect.get_coordinate_display_x1() << " ; " << rect.get_coordinate_display_y1() << ")" << endl;
-			cout << "Bottom right corner: " << "(" << rect.get_coordinate_display_x2() << " ; " << rect.get_coordinate_display_y2() << ")" << endl;
-			cout << "Height = " << rect.get_height() << endl;
-			cout << "Width = " << rect.get_width() << endl;
-			cout << "Area = " << rect.get_area() << endl;
-
-			cout << "Do you want to move the rectangle?" << endl << "1 - YES" << endl << "0 - NO" << endl;
-			bool mooving = false;
-			bool matching_numbers = false;
-			int choise;
-			while (matching_numbers == false)
-			{
-				cout << "Enter number: " << endl;
-				cin >> choise;
-				if (choise == 1 || choise == 0)
-				{
-					mooving = choise;
-					matching_numbers = true;
-				}
-				else
-				{
-					cout << "You entered the wrong number" << endl;
-				}
-				cout << endl;
-
-			}
-			if (mooving)
-			{
-				cout << "Enter movement: ";
-				cin >> move;
-				rect.set_moving(move);
-				cout << "Moved top-left coordinates:" << endl << "(" << rect.get_x1() << " ; " << rect.get_y1() << ")" << endl;
-				cout << "Moved bottom-right coordinates:" << endl << "(" << rect.get_x2() << " ; " << rect.get_y2() << ")" << endl;
-			}
-			else
-			{
-				cout << "You haven't moved the rectangle" << endl;
-			}
-			unequal_coordinates = true;
-		}
-		else
-		{
-			cout << "Coordinates must be different enter different coordinates" << endl << endl;
-		}
-	}
-	return 0;
+	Rectangle rect1(1.0, 5.0);
+	cout << "Координаты x1 ";
+	cout << rect1.get_coordinate_display_x1()<<endl;
+	cout << "Координаты x2 ";
+	cout << rect1.get_coordinate_display_x2() << endl;
+	cout << "Координаты y1 ";
+	cout << rect1.get_coordinate_display_y1() << endl;
+	cout << "Координаты y2 ";
+	cout << rect1.get_coordinate_display_y2() << endl;
+	cout << "Высота ";
+	cout << rect1.get_height() << endl;
+	cout << "Ширина ";
+	cout << rect1.get_width() << endl;
+	cout << "Площадь ";
+	cout << rect1.get_area() << endl;
+	rect1.set_moving(10);
+	cout << "Перемещенная координата x1 ";
+	cout << rect1.get_moving_x1() << endl;
+	cout << "Перемещенная координата x2 ";
+	cout << rect1.get_moving_x2() << endl;
+	cout << "Перемещенная координата y1 ";
+	cout << rect1.get_moving_y1() << endl;
+	cout << "Перемещенная координата y2 ";
+	cout << rect1.get_moving_y2() << endl;
 }
