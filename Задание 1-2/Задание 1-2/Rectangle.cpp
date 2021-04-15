@@ -15,7 +15,7 @@ Rectangle::Rectangle(double height, double width)
     }
     else
     {
-        throw invalid_argument{ "Длина или ширина не могут быть отрицательны" };
+        throw invalid_argument{ "Р”Р»РёРЅР° РёР»Рё С€РёСЂРёРЅР° РЅРµ РјРѕРіСѓС‚ Р±С‹С‚СЊ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹" };
     }
 }
 Rectangle::Rectangle(double x1, double y1, double x2, double y2)
@@ -32,7 +32,7 @@ Rectangle::Rectangle(double x1, double y1, double x2, double y2)
     }
     else
     {
-        throw invalid_argument{ "Введите другие значения x и y" };
+        throw invalid_argument{ "Р’РІРµРґРёС‚Рµ РґСЂСѓРіРёРµ Р·РЅР°С‡РµРЅРёСЏ x Рё y" };
     }
 }
 double Rectangle::get_coordinate_display_x1() { return x1; }
