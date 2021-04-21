@@ -7,13 +7,13 @@ int main()
 	setlocale(LC_ALL, "ru");
 	Rectangle rect1(1.0, 5.0);
 	cout << "Coordinate x1 ";
-	cout << rect1.get_coordinate_display_x1() << endl;
+	cout << rect1.get_coordinate_x1() << endl;
 	cout << "Coordinate x2 ";
-	cout << rect1.get_coordinate_display_x2() << endl;
+	cout << rect1.get_coordinate_x2() << endl;
 	cout << "Coordinate y1 ";
-	cout << rect1.get_coordinate_display_y1() << endl;
+	cout << rect1.get_coordinate_y1() << endl;
 	cout << "Coordinate y2 ";
-	cout << rect1.get_coordinate_display_y2() << endl;
+	cout << rect1.get_coordinate_y2() << endl;
 	cout << "Height ";
 	cout << rect1.get_height() << endl;
 	cout << "Width ";
