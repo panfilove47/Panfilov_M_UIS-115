@@ -1,5 +1,6 @@
 #include<iostream>
 #include"Pair.h"
+#include "Rectangle.h"
 using namespace std;
 
 int main() 

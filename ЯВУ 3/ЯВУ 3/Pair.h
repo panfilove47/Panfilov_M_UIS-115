@@ -1,5 +1,4 @@
 #pragma once
-#include<iostream>
 using namespace std;
 
 class Pair 
@@ -8,95 +7,48 @@ protected:
 	double a; 
 	double b;
 public:
-	Pair(); 
-
 	/**
 	 \brief	Конструктор по умолчанию
 	 */
-
-	Pair(double a, double b);
+	Pair(); 
 	/**
 	 \brief	Конструктор принимающий числа a и b
 	 */
-	explicit Pair(const  Pair&) = default;
-	/**
-	 \brief	Конструктор копирования
-	 */
-	Pair& operator=(const  Pair&) = default;
-	/**
-	 \brief	Конструктор присвоения
-	 */
-	double get_a();
-	/**
-
-	 \brief	Возвращает a
-	 \returns	a.
-	 */
-
-	double get_b();
-	/**
-
-	 \brief	Возвращает b
-	 \returns	b.
-	 */
-	double get_composition();
-	/**
-
-	 \brief	Возвращает произведение a и b
-	 \returns	a * b.
-	 */
-	void set_changing_numbers(double change_a, double change_b);
-	/**
-
-	 \brief	Возвращает изменение чисел a и b
-	 */
-	double get_changed_number_a();
-	/**
-
-	 \brief	Возвращает изменненный a
-	 \returns	a.
-	 */
-	double get_changed_number_b();
-	/**
-
-	 \brief	Возвращает изменненный b
-	 \returns	b.
-	 */
-	~Pair() = default;
+	explicit Pair(double a, double b);
 	/**
 	 \brief	Деструктор по умолчанию
 	 */
-};
-class Rectangle : public Pair
-{
-
-public:
-	explicit Rectangle(double width, double height);
-	/**
-	 \brief	Конструктор принимающий числа длину и ширину
-	 */
-	Rectangle(const  Rectangle&) = default;
+	~Pair() = default;
 	/**
 	 \brief	Конструктор копирования
 	 */
-	Rectangle& operator=(const  Rectangle&) = default;
+	Pair(const  Pair&) = default;
 	/**
 	 \brief	Конструктор присвоения
 	 */
-	double get_area();
+	Pair& operator=(const  Pair&) = default;
 	/**
-
-	 \brief	Возвращает площадь
-	 \returns	get_composition().
+	 \brief	Возвращает a
+	 \returns	a.
 	 */
-	double get_perimeter();
+	double get_a();
 	/**
-
-	 \brief	Возвращает периметр
-	 \returns	(get_b() * 2) + (get_a() * 2).
+	 \brief	Возвращает b
+	 \returns	b.
 	 */
-	~Rectangle() = default;
+	double get_b();
 	/**
-	\brief	Деструктор по умолчанию
-	*/
+	 \brief	Возвращает произведение a и b
+	 \returns	a * b.
+	 */
+	double get_composition();
+	/**
+	 \brief	Изменяет число a 
+	 */
+	void set_changing_a(double change_a);
+	/**
+	 \brief	Изменяет число b
+	 */
+	void set_changing_b(double change_b);
 };
+
