@@ -4,11 +4,11 @@ class Bicycle: public Vehicle
 {
 public:
 	/**
-	 \brief	Конструктор с параметрами
+	 \brief	РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 	 */
 	explicit Bicycle(double average_speed, string model, int number_of_passengers, double distance);
 	/**
-	 \brief	Деструктор по умолчанию
+	 \brief	Р”РµСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	 */
 	~Bicycle() = default;
 };

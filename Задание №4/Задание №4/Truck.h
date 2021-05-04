@@ -6,21 +6,21 @@ class Truck : public Car
 private:
 	double carrying;
 	/**
-	 \brief	Принимает грузоподъемность
+	 \brief	РџСЂРёРЅРёРјР°РµС‚ РіСЂСѓР·РѕРїРѕРґСЉРµРјРЅРѕСЃС‚СЊ
 	 */
 	void set_carrying(double carrying);
 public:
 	/**
-	 \brief	Конструктор с параметрами
+	 \brief	РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 	*/
 	explicit Truck(double average_speed, string model, int number_of_passengers, double distance, double fuel, double carrying);
 	/**
-	 \brief	Деструктор по умолчанию
+	 \brief	Р”РµСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	 */
 	~Truck() = default;
 
 	/**
-	 \brief	Возвращает грузоподъемность
+	 \brief	Р’РѕР·РІСЂР°С‰Р°РµС‚ РіСЂСѓР·РѕРїРѕРґСЉРµРјРЅРѕСЃС‚СЊ
 	 \returns carrying.
 	 */
 	double get_carrying();

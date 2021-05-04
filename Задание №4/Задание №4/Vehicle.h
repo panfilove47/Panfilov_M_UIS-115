@@ -11,57 +11,57 @@ protected:
 	double distance;
 
 	/**
-	 \brief	Принимает среднюю скорость
+	 \brief	РџСЂРёРЅРёРјР°РµС‚ СЃСЂРµРґРЅСЋСЋ СЃРєРѕСЂРѕСЃС‚СЊ
 	 */
 	void set_average_speed(double average_speed);
 	/**
-	 \brief	Принимает количество пассажиров
+	 \brief	РџСЂРёРЅРёРјР°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РїР°СЃСЃР°Р¶РёСЂРѕРІ
 	 */
 	void set_number_of_passengers(int number_of_passengers);
 	/**
-	 \brief	Принимает дистанцию в километрах
+	 \brief	РџСЂРёРЅРёРјР°РµС‚ РґРёСЃС‚Р°РЅС†РёСЋ РІ РєРёР»РѕРјРµС‚СЂР°С…
 	 */
 	void set_distance(double distance);
 public:
 	/**
-	 \brief	Конструктор по умолчанию
+	 \brief	РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	 */
 	Vehicle();
 	/**
-	 \brief	Конструктор с параметрами
+	 \brief	РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 	 */
 	explicit Vehicle(double average_speed, string model, int number_of_passengers, double distance);
 	/**
-	 \brief	Деструктор по умолчанию
+	 \brief	Р”РµСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	 */
 	~Vehicle() = default;
 	/**
-	 \brief	Возвращает время движения
+	 \brief	Р’РѕР·РІСЂР°С‰Р°РµС‚ РІСЂРµРјСЏ РґРІРёР¶РµРЅРёСЏ
 	 \returns	distance / average_speed.
 	 */
 	double get_travel_time();
 	/**
-	 \brief	Возвращает среднюю скорость
+	 \brief	Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃСЂРµРґРЅСЋСЋ СЃРєРѕСЂРѕСЃС‚СЊ
 	 \returns average speed.
 	 */
 	double get_average_speed();
 	/**
-	 \brief	Возвращает модель средства передвижения
+	 \brief	Р’РѕР·РІСЂР°С‰Р°РµС‚ РјРѕРґРµР»СЊ СЃСЂРµРґСЃС‚РІР° РїРµСЂРµРґРІРёР¶РµРЅРёСЏ
 	 \returns model.
 	 */
 	string get_model();
 	/**
-	 \brief	Возвращает количество пассажиров
+	 \brief	Р’РѕР·РІСЂР°С‰Р°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РїР°СЃСЃР°Р¶РёСЂРѕРІ
 	 \returns number of passengers.
 	 */
 	double get_number_of_passengers();
 	/**
-	 \brief	Возвращает расстояние в километрах
+	 \brief	Р’РѕР·РІСЂР°С‰Р°РµС‚ СЂР°СЃСЃС‚РѕСЏРЅРёРµ РІ РєРёР»РѕРјРµС‚СЂР°С…
 	 \returns distance.
 	 */
 	double get_distance();
 	/**
-	 \brief	Принимает новое значение расстояния
+	 \brief	РџСЂРёРЅРёРјР°РµС‚ РЅРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ СЂР°СЃСЃС‚РѕСЏРЅРёСЏ
 	 */
 	void set_new_distance(double distance);
 };
