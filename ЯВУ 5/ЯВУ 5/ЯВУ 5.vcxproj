@@ -141,14 +141,14 @@
   <ItemGroup>
     <ClCompile Include="LeapYear.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MyException2.cpp" />
-    <ClCompile Include="MyException3.cpp" />
+    <ClCompile Include="independent_class.cpp" />
+    <ClCompile Include="successor_class.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LeapYear.h" />
-    <ClInclude Include="MyException.h" />
-    <ClInclude Include="MyException2.h" />
-    <ClInclude Include="MyException3.h" />
+    <ClInclude Include="Empty_class.h" />
+    <ClInclude Include="independent_class.h" />
+    <ClInclude Include="successor_class.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

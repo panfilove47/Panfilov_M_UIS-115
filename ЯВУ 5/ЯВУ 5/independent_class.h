@@ -4,12 +4,12 @@ using namespace std;
 /**
 * \brief Независимый класс с полями, для возврата ошибки
 */
-class MyException2 {
+class independent_class {
 public:
 	string message;
-	explicit MyException2(string message);
+	explicit independent_class(string message);
 	/**
 	* \brief Деструктор по умолчанию
 	*/
-	~MyException2();
+	~independent_class();
 };

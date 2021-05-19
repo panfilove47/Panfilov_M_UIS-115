@@ -18,10 +18,10 @@
     <ClCompile Include="main.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
-    <ClCompile Include="MyException2.cpp">
+    <ClCompile Include="independent_class.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
-    <ClCompile Include="MyException3.cpp">
+    <ClCompile Include="successor_class.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
     <ClCompile Include="LeapYear.cpp">
@@ -32,13 +32,13 @@
     <ClInclude Include="LeapYear.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="MyException.h">
+    <ClInclude Include="Empty_class.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="MyException2.h">
+    <ClInclude Include="independent_class.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="MyException3.h">
+    <ClInclude Include="successor_class.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

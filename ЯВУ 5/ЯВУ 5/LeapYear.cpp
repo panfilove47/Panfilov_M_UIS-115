@@ -1,103 +1,60 @@
 #include "LeapYear.h"
-int LeapYear1(int year)
+bool is_leap_year(int year)
 {
-	if (year % 4 != 0 && (year % 100 == 0 || year % 400 != 0))
-	{
-		cout << "Год не високосный" << endl;
-	}
-	else
-	{
-		cout << "Год високосный" << endl;
-	}
-	return year;
+	return !(year % 4 != 0 && (year % 100 == 0 || year % 400 != 0));
 }
-int LeapYear2(int year)
+bool is_leap_year2(int year)
 {
 	if (year > 0)
 	{
-		if (year % 4 != 0 && (year % 100 == 0 || year % 400 != 0))
-		{
-			cout << "Год не високосный" << endl;
-		}
-		else
-		{
-			cout << "Год високосный" << endl;
-		}
+		is_leap_year(year);
 	}
 	else
 	{
 		throw 1;
 	}
 }
-	int LeapYear3(int year)
+bool is_leap_year3(int year)
 {
 	if (year > 0)
 	{
-		if (year % 4 != 0 && (year % 100 == 0 || year % 400 != 0))
-		{
-			cout << "Год не високосный" << endl;
-		}
-		else
-		{
-			cout << "Год високосный" << endl;
-		}
+		is_leap_year(year);
 	}
 	else
 	{
-		throw invalid_argument{ "Ошибка! Год меньше нуля, стандартное исключение" };
+		throw invalid_argument{ "Error! Year less than zero, standard exception" };
 	}
 }
-	int LeapYear4(int year)
+bool is_leap_year4(int year)
+{
+	if (year > 0)
 	{
-		if (year > 0)
-		{
-			if (year % 4 != 0 && (year % 100 == 0 || year % 400 != 0))
-			{
-				cout << "Год не високосный" << endl;
-			}
-			else
-			{
-				cout << "Год високосный" << endl;
-			}
-		}
-		else
-		{
-			throw MyException();
-		}
+		is_leap_year(year);
 	}
-	int LeapYear5(int year)
+	else
 	{
-		if (year > 0)
-		{
-			if (year % 4 != 0 && (year % 100 == 0 || year % 400 != 0))
-			{
-				cout << "Год не високосный" << endl;
-			}
-			else
-			{
-				cout << "Год високосный" << endl;
-			}
-		}
-		else
-		{
-			throw MyException2("Ошибка! Год равен/меньше 0, независимый класс с полями-параметрами функции");
-		}
+		throw empty_class();
 	}
-	int LeapYear6(int year)
+}
+bool is_leap_year5(int year)
+{
+	if (year > 0)
 	{
-		if (year > 0)
-		{
-			if (year % 4 != 0 && (year % 100 == 0 || year % 400 != 0))
-			{
-				cout << "Год не високосный" << endl;
-			}
-			else
-			{
-				cout << "Год високосный" << endl;
-			}
-		}
-		else
-		{
-			throw MyException3("Ошибка! Год равен/меньше 0, класс наследник");
-		}
+		is_leap_year(year);
 	}
+	else
+	{
+		throw independent_class("Error! Year is equal to / less than 0, independent class with function parameter fields");
+	}
+}
+bool is_leap_year6(int year)
+{
+	if (year > 0)
+	{
+		is_leap_year(year);
+	}
+	else
+	{
+		throw successor_class("Error! Year is equal to / less than 0, successor class");
+	}
+}

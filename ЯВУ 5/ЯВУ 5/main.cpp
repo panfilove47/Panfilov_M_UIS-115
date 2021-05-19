@@ -1,35 +1,39 @@
 #include "LeapYear.h"
+using namespace std;
+void year_is(bool year)
+{
+	if (year)
+	{
+		cout << "Year is leap" << endl;
+	}
+	else
+	{
+		cout << "Year is not leap" << endl;
+	}
+}
 int main() {
-	setlocale(LC_ALL, "Russian");
-	cout << LeapYear1(11) << endl;
+	year_is(is_leap_year(2004));
 	try {
-		cout << LeapYear2(0) << endl;
+		year_is(is_leap_year2(0));
+		year_is(is_leap_year3(0));
+		year_is(is_leap_year4(0));
+		year_is(is_leap_year5(0));
+		year_is(is_leap_year6(0));
+
 	}
 	catch (int) {
-		cout << "ќшибка!«наменатель равен 0, спецификатор throw" << endl;
-	}
-	try {
-		cout << LeapYear3(0) << endl;
+		cout << "Error! Year is 0, throw specifier" << endl;
 	}
 	catch (invalid_argument error) {
 		cerr << error.what() << endl;
 	}
-	try {
-		cout << LeapYear4(0) << endl;
+	catch (empty_class) {
+		cerr << "Error! Year is 0, empty class" << endl;
 	}
-	catch (MyException) {
-		cerr << "ќшибка!«наменатель равен 0, пустой класс" << endl;
-	}
-	try {
-		cout << LeapYear5(0) << endl;
-	}
-	catch (MyException2 error) {
+	catch (independent_class error) {
 		cerr << error.message << endl;
 	}
-	try {
-		cout << LeapYear6(0) << endl;
-	}
-	catch (MyException3 error) {
+	catch (successor_class error) {
 		cerr << error.what() << endl;
 	}
 }
