@@ -1,5 +1,16 @@
 #include "Car.h"
 using namespace std;
+void Car::set_number_of_passengers(int number_of_passengers)
+{
+	if (number_of_passengers > 0 && number_of_passengers <= 5)
+	{
+		this->number_of_passengers = number_of_passengers;
+	}
+	else
+	{
+		throw invalid_argument("Passengers can be from 1 to 5");
+	}
+}
 void Car::set_fuel(double fuel)
 {
 	if (fuel > 0)
@@ -8,7 +19,7 @@ void Car::set_fuel(double fuel)
 	}
 	else
 	{
-		throw invalid_argument("Топливо должно быть положительным");
+		throw invalid_argument("Fuel must be positive");
 	}
 }
 Car::Car()
@@ -18,7 +29,7 @@ Car::Car()
 	number_of_passengers = 1;
 	fuel = 1;
 }
-Car::Car(double average_speed, string model, int number_of_passengers, double distance, double fuel)
+Car::Car(double average_speed, string& model, int number_of_passengers, double distance, double fuel)
 {
 	set_average_speed(average_speed);
 	this->model = model;
@@ -37,4 +48,8 @@ double Car::get_fuel_consumption(double q)
 void Car::set_new_fuel(double fuel)
 {
 	set_fuel(fuel);
+}
+void Car::set_new_distance(double distance)
+{
+	set_distance(distance);
 }

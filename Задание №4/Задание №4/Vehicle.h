@@ -15,26 +15,18 @@ protected:
 	 */
 	void set_average_speed(double average_speed);
 	/**
-	 \brief	Принимает количество пассажиров
+	 \brief	Виртуальная функция принимает количество пассажиров
 	 */
-	void set_number_of_passengers(int number_of_passengers);
+	virtual void set_number_of_passengers(int number_of_passengers) = 0;
 	/**
 	 \brief	Принимает дистанцию в километрах
 	 */
 	void set_distance(double distance);
 public:
 	/**
-	 \brief	Конструктор по умолчанию
+	 \brief	Виртуальный деструктор
 	 */
-	Vehicle();
-	/**
-	 \brief	Конструктор с параметрами
-	 */
-	explicit Vehicle(double average_speed, string model, int number_of_passengers, double distance);
-	/**
-	 \brief	Деструктор по умолчанию
-	 */
-	~Vehicle() = default;
+	virtual ~Vehicle() = 0;
 	/**
 	 \brief	Возвращает время движения
 	 \returns	distance / average_speed.
@@ -63,6 +55,6 @@ public:
 	/**
 	 \brief	Принимает новое значение расстояния
 	 */
-	void set_new_distance(double distance);
+	virtual void set_new_distance(double distance) = 0;
 };
 

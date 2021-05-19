@@ -6,7 +6,14 @@ class Car : public Vehicle
 {
 protected:
 	double fuel;
+	/**
+	 \brief	функция принимает количество топлива
+	 */
 	void set_fuel(double fuel);
+	/**
+	 \brief	функция принимает количество пассажиров
+	 */
+	void set_number_of_passengers(int number_of_passengers) override;
 public:
 	/**
 	 \brief	Конструктор по умолчанию
@@ -15,11 +22,11 @@ public:
 	/**
 	 \brief	Конструктор с параметрами
 	*/
-	explicit Car(double average_speed, string model, int number_of_passengers, double distance, double fuel);
+	explicit Car(double average_speed, string& model, int number_of_passengers, double distance, double fuel);
 	/**
 	 \brief	Деструктор по умолчанию
 	*/
-	~Car() = default;
+	~Car() override = default;
 	/**
 	 \brief	Возвращает количество топлива в литрах
 	 \returns	fuel
@@ -34,5 +41,9 @@ public:
 	 \returns	q * distance / 100
 	 */
 	double get_fuel_consumption(double q);
+	/**
+	 \brief	функция принимает новое расстояние
+	 */
+	void set_new_distance(double distance) override;
 };
 
