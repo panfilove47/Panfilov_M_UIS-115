@@ -28,7 +28,7 @@ int main() {
 		cerr << error.what() << endl;
 	}
 	catch (empty_class) {
-		cerr << "Error! Year is 0, empty class" << endl;
+		cout << "Error! Year is 0, empty class" << endl;
 	}
 	catch (independent_class error) {
 		cerr << error.message << endl;
